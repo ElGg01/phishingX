@@ -64,10 +64,11 @@ main {
 
 .subtitle {
     font-family: 'XFont';
+    letter-spacing: 1px;
 }
 
 .separator {
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 1rem 0;
 }
 
 .button-single-sing-on {
@@ -86,6 +87,18 @@ main {
     font-weight: bold;
     max-width: 300px;
     border-radius: 20px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.button-login {
+    background-color: transparent;
+    color: #1a8cd8;
+    font-weight: bold;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 1px solid rgb(83, 100, 113);
     padding: 0.5rem;
     text-align: center;
     margin: 0.5rem 0 1rem 0;
@@ -146,4 +159,48 @@ main {
 
 .mark-blue {
     color: #1a8cd8;
+}
+
+.already-account {
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.logo-hide {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        height: auto;
+    }
+    .flex-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .left {
+        display: flex;
+        justify-content: start;
+        display: none;
+    }
+    
+    .left svg {
+        width: 25%;
+    }
+    
+    .right {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo-hide {
+        display: block;
+        width: 10%;
+        margin: 1rem;
+    }
 }
