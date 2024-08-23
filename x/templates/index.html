@@ -112,11 +112,13 @@
       </div>
       <div class="separator">
         <h2 class="already-account">¿Ya tienes una cuenta?</h2>
-        <div class="button-login">
-          <div class="button-content">
-            <p>Iniciar sesión</p>
+        <a onclick="openModal()" id="loginBTN">
+          <div class="button-login">
+            <div class="button-content">
+              <p>Iniciar sesión</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -142,5 +144,11 @@
   <a href="">Configuración</a>
   <a href="">© 2024 X Corp.</a>
 </footer>
+
+<div class="modal" id="modal">
+  <div class="login">FORMULARIO DE LOGIN</div>
+</div>
+
+<script src="{% static '/js/modal.js' %}"></script>
 
 {% endblock %}

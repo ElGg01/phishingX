@@ -24,6 +24,7 @@ body {
     color: white;
     height: 100dvh;
     font-family: 'GoogleFont';
+    position: relative;
 }
 
 main {
@@ -183,6 +184,10 @@ main {
     display: none;
 }
 
+a {
+    cursor: pointer;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -197,6 +202,28 @@ footer a {
     padding: 0.1rem 0.5rem;
     font-size: 13px;
     word-wrap: break-word;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(91, 112, 131, 0.4);;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.login {
+    background-color: black;
+    width: 600px;
+    height: 650px;
+    border-radius: 16px;
 }
 
 @media screen and (max-width: 1000px) {
