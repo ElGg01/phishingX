@@ -27,7 +27,7 @@ body {
 }
 
 main {
-    height: 100%;
+    height: 90%;
 }
 
 .flex-container {
@@ -60,6 +60,7 @@ main {
 .title {
     font-size: 4rem;
     font-family: 'XFont';
+    color: #e7e9ea;
 }
 
 .subtitle {
@@ -171,6 +172,22 @@ main {
     display: none;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #71767b;
+    padding: 0.3rem 0.5rem;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
 @media screen and (max-width: 1000px) {
 
     body {
@@ -202,5 +219,9 @@ main {
         display: block;
         width: 10%;
         margin: 1rem;
+    }
+
+    .title {
+        font-size: 3rem;
     }
 }
