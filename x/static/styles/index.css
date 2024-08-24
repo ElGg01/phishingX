@@ -184,8 +184,10 @@ main {
     display: none;
 }
 
-a {
+.right a {
     cursor: pointer;
+    max-width: 300px;
+    display: block;
 }
 
 footer {
