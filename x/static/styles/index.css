@@ -291,13 +291,13 @@ footer a {
     margin: 1.5rem auto;
 }
 
-.email_label {
+/* .email_label {
     width: 300px;
     position: relative;
 }
 
 .email_label input {
-    width: 100%; /* Cambia a 100% para que el input llene el contenedor */
+    width: 100%;
     border-radius: 6px;
     background-color: transparent;
     border: 1px solid #333639;
@@ -321,16 +321,34 @@ input + label {
     pointer-events: none;
     transition: .2s ease;
     
-    /* Mantener el texto en una línea y ocultar desbordamiento */
-    width: 95%; /* Ajusta el ancho del label para que coincida con el input */
+    width: 95%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    box-sizing: border-box;
+} */
+
+/*VERSION 1*/
+
+/* input:focus, input:not(:placeholder-shown) {
+    outline: 1px solid #1a8cd8;
 }
 
-input:focus {
+input:focus + label, input:not(:placeholder-shown) + label {
+    color: #1a8cd8;
+    top: 6px;
+    left: 0px;
+    font-size: 12px;
+} */
+
+/* VERSION 2 */
+
+/* input:focus {
     outline: 1px solid #1a8cd8;
+}
+
+input:not(:focus:not(:placeholder-shown)) {
+    outline: 1px solid #71767b;
 }
 
 input:focus + label {
@@ -339,6 +357,72 @@ input:focus + label {
     left: 0px;
     font-size: 12px;
 }
+
+input:not(:focus:not(:placeholder-shown)) + label {
+    color: #71767b;
+    top: 6px;
+    left: 0px;
+    font-size: 12px;
+} */
+
+.email_label {
+    width: 300px;
+    position: relative;
+}
+
+.email_label input {
+    width: 100%;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #333639;
+    padding: 25px 10px 5px 10px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus {
+    outline: 1px solid #1a8cd8;
+}
+
+input + label {
+    position: absolute;
+    top: 15px; /* Ajusta la posición inicial del label */
+    left: 10px;
+    color: #71767b; /* Color gris por defecto */
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.2s ease;
+    
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Cambiar color del label cuando el input está enfocado o tiene texto */
+input:focus + label,
+input:not(:placeholder-shown):focus + label {
+    color: #1a8cd8; /* Cambia a azul o el color de enfoque que desees */
+    top: 6px;
+    left: 10px;
+    font-size: 12px;
+}
+
+/* Cambiar color del label cuando el input no está enfocado pero tiene texto */
+input:not(:focus):not(:placeholder-shown) + label {
+    color: #71767b; /* Color gris cuando el input no está enfocado */
+    top: 6px;
+    left: 10px;
+    font-size: 12px;
+}
+
 
 @media screen and (max-width: 1000px) {
 
