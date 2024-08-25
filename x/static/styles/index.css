@@ -18,6 +18,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Chirp';
+    src: url("../fonts/Chirp-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChirpBold';
+    src: url("../fonts/Chirp-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
     background-color: black;
@@ -29,6 +43,10 @@ body {
 
 main {
     height: 90%;
+}
+
+a {
+    cursor: pointer;
 }
 
 .flex-container {
@@ -212,7 +230,7 @@ footer a {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(91, 112, 131, 0.4);;
+    background-color: rgba(91, 112, 131, 0.4);
     width: 100%;
     height: 100dvh;
     display: flex;
@@ -226,6 +244,100 @@ footer a {
     width: 600px;
     height: 650px;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.modal-header img {
+    max-height: 2rem;
+}
+
+.modal-header svg {
+    max-height: 2rem;
+    width: 75%;
+}
+
+.modal-body {
+    font-family: 'ChirpBold';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body a {
+    text-decoration: none;
+    max-width: 300px;
+    display: block;
+}
+
+.modal-body h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modal-body .model-body-center {
+    width: 100%;
+}
+
+.margin-auto {
+    margin: 1.5rem auto;
+}
+
+.email_label {
+    width: 300px;
+    position: relative;
+}
+
+.email_label input {
+    width: 100%; /* Cambia a 100% para que el input llene el contenedor */
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #333639;
+    padding: 25px 10px 5px 10px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+input + label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: #71767b;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .2s ease;
+    
+    /* Mantener el texto en una línea y ocultar desbordamiento */
+    width: 95%; /* Ajusta el ancho del label para que coincida con el input */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+input:focus {
+    outline: 1px solid #1a8cd8;
+}
+
+input:focus + label {
+    color: #1a8cd8;
+    top: 6px;
+    left: 0px;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -276,5 +388,19 @@ footer a {
 
     .footer a {
         font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .login {
+        width: 100vw;
+        height: 100dvh;
+        justify-content: space-between;
+    }
+
+    .modal-body h2 {
+        text-align: start;
+        width: 300px;
+        margin: auto;
     }
 }
