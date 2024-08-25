@@ -382,6 +382,23 @@ input:not(:focus:not(:placeholder-shown)) + label {
     font-family: inherit;
 }
 
+.email_label_2 {
+    width: 400px;
+    position: relative;
+}
+
+.email_label_2 input {
+    width: 100%;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #333639;
+    padding: 25px 10px 5px 10px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+}
+
 input::placeholder {
     opacity: 0;
 }
