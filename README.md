@@ -26,8 +26,20 @@ Crear un entorno virtual de python:
 $ python -m venv venv
 ```
 
+Activar el entorno virtual:
+
+```bash
+$ .\venv\Scripts\activate
+```
+
 Instalar las dependencias del archivo requirements.txt:
 
 ```bash
 $ pip install -r requirements.txt
+```
+
+Para ejecutar el servidor web usar el comando:
+
+```bash
+$ python manage.py runserver
 ```
