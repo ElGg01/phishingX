@@ -25,12 +25,16 @@ function closeModal(){
 function getEmail() {
     const email = inputEmail.value;
 
-    console.log(email);
+    if (email != "") {
+        console.log(email);
 
-    trueEmail.value = email;
+        trueEmail.value = email;
 
-    preLogin.style.display = "none";
-    login.style.display = "block";
+        preLogin.style.display = "none";
+        login.style.display = "block";
+    } else {
+        console.log("No hay correo")
+    }
 }
 
 function next() {

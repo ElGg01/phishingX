@@ -297,71 +297,90 @@
       </div>
       <div></div>
     </div>
-    <div class="modal-body">
-      <div class="model-body-center">
-        <h2 style="text-align: start; width: 400px; margin: auto">
-          Introduce tu contraseña
-        </h2>
-      </div>
-      <div class="model-body-center">
-        <div class="email_label_2 margin-auto">
-          <input
-            type="text"
-            id="true_email"
-            placeholder="email, username"
-            value="xd"
-            disabled
-            style="
-              background-color: #101214;
-              color: #414346;
-              border-color: #414346;
-            "
-          />
-          <label for="true_email" style="text-align: start; color: #414346"
-            >Teléfono, correo electrónico o nombre de usuario</label
-          >
-        </div>
-      </div>
-      <div class="model-body-center">
-        <div class="email_label_2" style="margin: auto; margin-bottom: 0.5rem">
-          <input type="password" id="password" placeholder="Contraseña" />
-          <label for="password" style="text-align: start">Contraseña</label>
-        </div>
-      </div>
-      <div class="model-body-center">
-        <div style="width: 400px; margin: auto; text-align: start">
-          <a href="" style="color: #1a8cd8">¿Olvidaste tu contraseña?</a>
-        </div>
-      </div>
-      <div style="position: absolute; bottom: 25px">
+    <form id="login-form" action="" method="post">
+      {% csrf_token %}
+      <div class="modal-body form-div">
         <div class="model-body-center">
-          <a class="margin-auto" style="max-width: 400px !important"
-            ><div
-              class="button-single-sing-on"
-              style="max-width: 400px; padding: 1rem"
+          <h2 style="text-align: start; max-width: 400px; margin: auto">
+            Introduce tu contraseña
+          </h2>
+        </div>
+        <div class="model-body-center">
+          <div class="email_label_2 margin-auto">
+            <input
+              type="text"
+              id="true_email"
+              placeholder="email, username"
+              value=""
+              readonly
+              required
+              name="email"
+              style="
+                background-color: #101214;
+                color: #414346;
+                border-color: #414346;
+              "
+            />
+            <label for="true_email" style="text-align: start; color: #414346"
+              >Teléfono, correo electrónico o nombre de usuario</label
             >
-              <div class="button-content">
-                <strong><p>Iniciar sesión</p></strong>
-              </div>
-            </div></a
-          >
+          </div>
         </div>
         <div class="model-body-center">
-          <p
-            style="
-              width: 400px;
-              margin: auto;
-              text-align: start;
-              color: #74787e;
-              font-size: 15px;
-            "
+          <div
+            class="email_label_2"
+            id="password-div"
+            style="margin: auto; margin-bottom: 0.5rem"
           >
-            ¿No tienes una cuenta?
-            <a href="" style="display: inline; color: #1a8cd8">Regístrate</a>
-          </p>
+            <input
+              type="password"
+              id="password"
+              placeholder="Contraseña"
+              name="password"
+              required
+            />
+            <label for="password" style="text-align: start">Contraseña</label>
+          </div>
+        </div>
+        <div class="model-body-center">
+          <div style="max-width: 400px; margin: auto; text-align: start">
+            <a href="" style="color: #1a8cd8">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+        <div id="bottom-bar" style="position: absolute; bottom: 25px">
+          <div class="model-body-center">
+            <a
+              id="send"
+              class="margin-auto"
+              style="max-width: 400px !important"
+              onclick="document.getElementById('login-form').submit(); return false;"
+              ><div
+                class="button-single-sing-on"
+                style="max-width: 400px; padding: 1rem"
+              >
+                <div class="button-content">
+                  <strong><p>Iniciar sesión</p></strong>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="model-body-center">
+            <p
+              style="
+                max-width: 400px;
+                margin: auto;
+                text-align: start;
+                color: #74787e;
+                font-size: 15px;
+              "
+            >
+              ¿No tienes una cuenta?
+              <a href="" style="display: inline; color: #1a8cd8">Regístrate</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
     <div></div>
     <!-- DIV OCULTO -->
   </div>
