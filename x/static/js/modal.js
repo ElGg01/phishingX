@@ -37,6 +37,9 @@ function getEmail() {
     }
 }
 
-function next() {
-
+function send() {
+    if (password.value != "") {
+        document.getElementById('login-form').submit();
+        return false;
+    };
 }
