@@ -334,9 +334,9 @@ input:focus {
 
 input + label {
     position: absolute;
-    top: 15px; /* Ajusta la posición inicial del label */
+    top: 15px;
     left: 10px;
-    color: #71767b; /* Color gris por defecto */
+    color: #71767b;
     font-size: 18px;
     pointer-events: none;
     transition: 0.2s ease;
@@ -345,21 +345,19 @@ input + label {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    box-sizing: border-box;
 }
 
-/* Cambiar color del label cuando el input está enfocado o tiene texto */
 input:focus + label,
 input:not(:placeholder-shown):focus + label {
-    color: #1a8cd8; /* Cambia a azul o el color de enfoque que desees */
+    color: #1a8cd8;
     top: 6px;
     left: 10px;
     font-size: 12px;
 }
 
-/* Cambiar color del label cuando el input no está enfocado pero tiene texto */
 input:not(:focus):not(:placeholder-shown) + label {
-    color: #71767b; /* Color gris cuando el input no está enfocado */
+    color: #71767b;
     top: 6px;
     left: 10px;
     font-size: 12px;
