@@ -16,6 +16,7 @@ Este proyecto tiene como **único objetivo enseñar y concientizar sobre las té
 # Requisitos:
 
 - Python 3
+- Virtualenv (pip install virtualenv)
 - Dependencias de requeriments.txt
 
 # Instalación:
