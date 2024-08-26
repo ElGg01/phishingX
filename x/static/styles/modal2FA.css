@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'XFont';
+    src: url("../fonts/Molde-Expanded-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GoogleFont';
+    src: url("../fonts/GoogleSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chirp';
+    src: url("../fonts/Chirp-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChirpBold';
+    src: url("../fonts/Chirp-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    height: 100dvh;
+    font-family: 'GoogleFont';
+    position: relative;
+}
+
+main {
+    height: 90%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.flex-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.left {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+}
+
+.left svg {
+    width: 50%;
+    padding: 2rem;
+    margin-left: 1rem;
+}
+
+.right {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 3.5rem;
+    transform: scaleY(1.1);
+    padding: 1rem 0;
+    font-family: 'XFont';
+    color: #e7e9ea;
+    max-width: 600px;
+}
+
+.subtitle {
+    font-family: 'XFont';
+    font-size: 32px;
+    letter-spacing: 0px;
+    transform: scaleY(1.1);
+}
+
+.separator {
+    margin: 2rem 0 1rem 0;
+}
+
+.separator a {
+    text-decoration: none;
+}
+
+.button-single-sing-on {
+    background-color: white;
+    color: black;
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.button-create-account {
+    background-color: #1a8cd8;
+    color: white;
+    font-weight: bold;
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.button-login {
+    background-color: transparent;
+    color: #1a8cd8;
+    font-weight: bold;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 1px solid rgb(83, 100, 113);
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'GoogleFont';
+}
+
+.button-content svg {
+    width: 16px;
+    height: 16px;
+}
+
+.divider {
+    width: 100%;
+}
+
+#or {
+    position: relative;
+    width: 300px;
+    height: 25px;
+    
+    line-height: 25px;
+    text-align: center;
+}
+
+#or::before,
+#or::after {
+    position: absolute;
+    width: 130px;
+    height: 1px;
+    
+    top: 12px;
+    
+    background-color: #2f3336;
+    
+    content: '';
+}
+
+#or::before {
+    left: 0;
+}
+
+#or::after {
+    right: 0;
+}
+
+.terms {
+    max-width: 300px;
+    color: gray;
+    font-size: 11px
+}
+
+.mark-blue {
+    color: #1a8cd8;
+}
+
+.already-account {
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.logo-hide {
+    display: none;
+}
+
+.right a {
+    cursor: pointer;
+    max-width: 300px;
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 1rem 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #71767b;
+    padding: 0.1rem 0.5rem;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(91, 112, 131, 0.4);
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: black;
+    width: 600px;
+    height: 650px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.modal-header img {
+    max-height: 2rem;
+}
+
+.modal-header svg {
+    max-height: 2rem;
+    width: 75%;
+}
+
+.modal-body {
+    font-family: 'ChirpBold';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body a {
+    text-decoration: none;
+    max-width: 300px;
+    display: block;
+}
+
+.modal-body h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modal-body .model-body-center {
+    width: 100%;
+}
+
+.margin-auto {
+    margin: 1.5rem auto;
+}
+
+.email_label {
+    width: 300px;
+    position: relative;
+}
+
+.email_label input {
+    width: 100%;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #333639;
+    padding: 25px 10px 5px 10px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+.email_label_2 {
+    width: 400px;
+    position: relative;
+}
+
+.email_label_2 input {
+    width: 100%;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #333639;
+    padding: 25px 10px 5px 10px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus {
+    outline: 1px solid #1a8cd8;
+}
+
+input + label {
+    position: absolute;
+    top: 15px; /* Ajusta la posición inicial del label */
+    left: 10px;
+    color: #71767b; /* Color gris por defecto */
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.2s ease;
+    
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Cambiar color del label cuando el input está enfocado o tiene texto */
+input:focus + label,
+input:not(:placeholder-shown):focus + label {
+    color: #1a8cd8; /* Cambia a azul o el color de enfoque que desees */
+    top: 6px;
+    left: 10px;
+    font-size: 12px;
+}
+
+/* Cambiar color del label cuando el input no está enfocado pero tiene texto */
+input:not(:focus):not(:placeholder-shown) + label {
+    color: #71767b; /* Color gris cuando el input no está enfocado */
+    top: 6px;
+    left: 10px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        height: auto;
+    }
+    .flex-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .left {
+        display: flex;
+        justify-content: start;
+        display: none;
+    }
+    
+    .left svg {
+        width: 25%;
+    }
+    
+    .right {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0.5rem;
+    }
+
+    .logo-hide {
+        display: block;
+        width: 10%;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .footer a {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .login {
+        width: 100vw;
+        height: 100dvh;
+        justify-content: start;
+    }
+
+    .modal-body h2 {
+        text-align: start;
+        width: 300px;
+        margin: auto;
+    }
+
+    .form-div {
+        padding-left: 1rem;
+    }
+
+    .form-div h2 {
+        font-size: 1.5rem;
+        width: auto;
+    }
+
+    .form-div input {
+        margin: 0;
+        max-width: 100vw;
+    }
+
+    .email_label_2 {
+        width: 95%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    #password-div {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    #send {
+        width: 90%;
+    }
+
+    #bottom-bar {
+        width: 80%;
+    }
+
+    #botom-bar p {
+        width: auto;
+    }
+}
