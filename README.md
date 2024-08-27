@@ -18,6 +18,7 @@ Este proyecto tiene como **único objetivo enseñar y concientizar sobre las té
 - Python 3
 - Virtualenv (pip install virtualenv)
 - Dependencias de requeriments.txt
+- Cuenta de mailtrap (https://mailtrap.io/)
 
 # Instalación:
 
@@ -38,6 +39,35 @@ Instalar las dependencias del archivo requirements.txt:
 ```bash
 $ pip install -r requirements.txt
 ```
+
+# Configuración:
+
+Entrar a el archivo settings.py para configurar el servidor de mailtrap y poder enviar correos. A continuación un diagrama de las rutas del proyecto para encontrar el archivo:
+
+```bash
+/phishingX
+│
+├── phishingX/
+│   └── settings.py # <--- MODIFICAR ESTE
+├── x/
+├── .gitignore
+├── db.sqlite3
+├── manage.py
+├── README.md
+└── requirements.txt
+```
+
+Dentro del archivo settings.py modificar las ultimas lineas que hacen referencia a mailtrap con los datos de nuestra cuenta:
+
+```python
+# MAILTRAP
+EMAIL_HOST = "sandbox.smtp.mailtrap.io"
+EMAIL_HOST_USER = "**************"
+EMAIL_HOST_PASSWORD = "**************"
+EMAIL_PORT = "2525"
+```
+
+# Ejecución:
 
 Para ejecutar el servidor web usar el comando:
 

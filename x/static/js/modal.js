@@ -9,6 +9,10 @@ const preLogin = document.getElementById("prelogin");
 const login = document.getElementById("login");
 const password = document.getElementById("password");
 
+const eyeBTN = document.getElementById("password-eye");
+const view = document.getElementById("view");
+const hide = document.getElementById("hide");
+
 function openModal(){
     modal.style.display = "flex";
 }
@@ -43,3 +47,15 @@ function send() {
         return false;
     };
 }
+
+eyeBTN.addEventListener('click', () => {
+    if (password.type === 'password') {
+        password.type = 'text';
+        view.style.display = 'none';
+        hide.style.display = 'block';
+    } else {
+        password.type = 'password';
+        view.style.display = 'block';
+        hide.style.display = 'none';
+    }
+});

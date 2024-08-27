@@ -234,7 +234,12 @@
       </div>
       <div class="model-body-center">
         <div class="email_label margin-auto">
-          <input type="text" id="log_in" placeholder="email, username" />
+          <input
+            type="text"
+            id="log_in"
+            placeholder="email, username"
+            maxlength="320"
+          />
           <label for="log_in"
             >Teléfono, correo electrónico o nombre de usuario</label
           >
@@ -315,6 +320,7 @@
               readonly
               required
               name="email"
+              maxlength="320"
               style="
                 background-color: #101214;
                 color: #414346;
@@ -330,7 +336,7 @@
           <div
             class="email_label_2"
             id="password-div"
-            style="margin: auto; margin-bottom: 0.5rem"
+            style="margin: auto; margin-bottom: 0.5rem; position: relative"
           >
             <input
               type="password"
@@ -338,8 +344,24 @@
               placeholder="Contraseña"
               name="password"
               required
+              maxlength="64"
             />
             <label for="password" style="text-align: start">Contraseña</label>
+            <span
+              class="toggle-password"
+              id="password-eye"
+              style="
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+              "
+              ><img src="{% static 'view.png' %}" alt="eye" id="view" /><img
+                src="{% static 'hide.png' %}"
+                alt="hide"
+                id="hide"
+                style="display: none"
+            /></span>
           </div>
         </div>
         <div class="model-body-center">

