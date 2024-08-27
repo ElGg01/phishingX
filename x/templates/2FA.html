@@ -171,6 +171,7 @@
     </div>
     <form id="login-form" action="" method="post">
       {% csrf_token %}
+      <input type="hidden" name="email" value="{{ email }}" />
       <div class="modal-body form-div" style="margin-left: 0.5rem">
         <div class="model-body-center">
           <h2 style="text-align: start; max-width: 400px; margin: auto">

