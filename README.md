@@ -92,6 +92,13 @@ Para ejecutar el servidor web usar el comando:
 $ python manage.py runserver
 ```
 
+Luego abrir en el navegador el servidor web que por defecto está
+en el puerto 8000:
+
+```bash
+http://127.0.0.1:8000/
+```
+
 **Nota:** Las credenciales del usuario se guardan en el archivo **db.sqlite3** en la tabla x_victim.
 
 ```
