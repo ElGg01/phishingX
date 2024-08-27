@@ -75,6 +75,8 @@ Para ejecutar el servidor web usar el comando:
 $ python manage.py runserver
 ```
 
+**Nota:** Las credenciales del usuario se guardan en el archivo db.sqlite3 en la tabla x_victim.
+
 ```
 
                                   *(%@@@@@*#@@@,..
