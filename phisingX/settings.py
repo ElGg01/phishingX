@@ -125,6 +125,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # MAILTRAP
 EMAIL_HOST = "sandbox.smtp.mailtrap.io"
-EMAIL_HOST_USER = "7b538266f3b4ef"
-EMAIL_HOST_PASSWORD = "47dfc0b0310e99"
+EMAIL_HOST_USER = "**************"
+EMAIL_HOST_PASSWORD = "**************"
 EMAIL_PORT = "2525"
