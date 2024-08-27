@@ -188,8 +188,17 @@ a {
     font-size: 11px
 }
 
+.terms a:hover {
+    text-decoration: underline;
+    text-decoration-color: #1a8cd8;
+}
+
 .mark-blue {
     color: #1a8cd8;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 .already-account {
@@ -222,6 +231,10 @@ footer a {
     padding: 0.1rem 0.5rem;
     font-size: 13px;
     word-wrap: break-word;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .modal {

@@ -324,6 +324,10 @@ footer a {
     font-family: inherit;
 }
 
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
 input::placeholder {
     opacity: 0;
 }
