@@ -1,6 +1,17 @@
 # Phishing X
 
-Un clon de **X** (Twitter).
+Un clon de **X** (Twitter). (https://x.com/)
+
+# Vector inicial:
+
+Existen distintas maneras en las cuales una persona puede ser victima de phishing, pero las más comunes para X (Twitter) han sido mensajes privados por la misma plataforma y correos electronicos fraudulentos mismos que se muestran a continuación:
+
+<img src="img/email_phishing.jpeg" alt="email_phishing" width="228">
+<img src="img/x_message.jpeg" alt="x_message" width="200">
+
+Una vez que el usuario da click en los enlaces es dirigido a una página de inicio de sesión como la presente, donde el usuario pone sus credenciales confiando en que está en la página real dandole acceso al atacante.
+
+**Nota:** Las capturas son de intentos de phishing reales.
 
 # ⚠️ ADVERTENCIA
 
@@ -12,6 +23,10 @@ Este código **no debe ser utilizado fuera del entorno educacional ni aplicado a
 **El autor no se hace responsable por el uso indebido de este código.** Cualquier intento de utilizar este proyecto para propósitos distintos a los estipulados en este repositorio es **bajo su propia responsabilidad.**
 
 Este proyecto tiene como **único objetivo enseñar y concientizar sobre las técnicas de ciberseguridad y los riesgos asociados.** Asegúrate de cumplir con todas las leyes y regulaciones aplicables en tu jurisdicción.
+
+# Contexto:
+
+El presente repositorio contiene un sitio web desarrollado con **DJANGO** el cual replica la interfaz de X (Twitter), almacena las credenciales del usuario en una base de datos de sqlite y envía un código de verificación al correo del usuario simulado mismo que se introduce en la página clonada e imprime el código de verificación en la consola.
 
 # Requisitos:
 
@@ -42,7 +57,7 @@ $ pip install -r requirements.txt
 
 # Configuración:
 
-Entrar a el archivo settings.py para configurar el servidor de mailtrap y poder enviar correos. A continuación un diagrama de las rutas del proyecto para encontrar el archivo:
+Entrar a el archivo settings.py para configurar el servidor de mailtrap y poder enviar correos para un **supuesto 2FA**. A continuación un diagrama de las rutas del proyecto para encontrar el archivo:
 
 ```bash
 /phishingX
@@ -67,6 +82,8 @@ EMAIL_HOST_PASSWORD = "**************"
 EMAIL_PORT = "2525"
 ```
 
+**Nota:** Si no se configuran las credenciales correctamente no se podrá enviar el correo.
+
 # Ejecución:
 
 Para ejecutar el servidor web usar el comando:
@@ -75,7 +92,7 @@ Para ejecutar el servidor web usar el comando:
 $ python manage.py runserver
 ```
 
-**Nota:** Las credenciales del usuario se guardan en el archivo db.sqlite3 en la tabla x_victim.
+**Nota:** Las credenciales del usuario se guardan en el archivo **db.sqlite3** en la tabla x_victim.
 
 ```
 
